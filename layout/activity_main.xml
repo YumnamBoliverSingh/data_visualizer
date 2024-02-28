@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rightTopMostCL"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        ><androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--1.  SCORE: Landing Page  -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="#ffffff"
+            android:id="@+id/CL_score_landing_page1"
+            ><ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ><androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/churwesc"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:textSize="20dp"
+                    android:text="Check your"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Website Score"
+                    android:textSize="25dp"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- Enter the URL here -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/CL_enter"
+                android:background="?attr/selectableItemBackground"
+
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toBottomOf="@id/churwesc"
+                android:layout_marginTop="50dp"
+
+                >
+                <!-- top CL for Entering -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/enterhere_cl"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        >
+
+                        <ImageView
+                            android:layout_width="17dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/earth_icon_gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:layout_marginLeft="9dp"
+                            android:id="@+id/ivglobe"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            />
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:id="@+id/ET_ws_score"
+                            android:background="@null"
+                            android:textSize="10dp"
+                            android:inputType="textEmailAddress"
+
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginLeft="30dp"
+                            />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <!-- Non Highlight Bckg -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:id="@+id/nonhighlight_score"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:background="@drawable/unhighlight_edittext_bckg"
+                        />
+                    <!-- Highlight Bckg -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="5dp"
+
+                        android:id="@+id/highlight_score"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:background="@drawable/highlight_blue_editext"
+
+                        />
+                    <!-- Blue "Your Website URL" -->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="#ffffff"
+                        android:layout_marginLeft="15dp"
+
+                        android:padding="1.5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_blue_ywurl_score"
+                            android:text=" Your Website URL "
+                            android:textStyle="bold"
+                            android:textSize="10dp"
+                            android:textColor="#1976d3"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tv_gray_ywurl_score"
+                            android:text=" Your Website URL "
+                            android:textSize="10dp"
+                            android:visibility="invisible"
+                            android:textColor="#1976d3"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <!-- Gray "Your Website URL" -->
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- BUTTON: Check Now Btn -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="105dp"
+                    android:background="@drawable/drawable_bckg"
+                    android:layout_height="30dp"
+                    android:id="@+id/cl_score_enter_enternow"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginRight="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/enterhere_cl"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="Check Now"
+                        android:textColor="#ffffff"
+                        android:textSize="12.4dp"
+                        android:textAllCaps="true"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- Constraint Layout showing the List is Empty        |||          List View  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/CL_enter"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/CL_emptTVs_LV"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="50dp"
+                >
+                <!-- CLose: Points Top -->
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+
+                    android:id="@+id/IV_close_recentcheck_view"
+
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackground"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:src="@drawable/caplike_point_bottom_ic"
+                    />
+                <!-- CLose: Points Bottom -->
+                <ImageView
+                    android:id="@+id/IV_open_recentcheck_view"
+                    android:layout_width="21dp"
+                    android:layout_height="23dp"
+                    android:layout_marginLeft="10dp"
+
+                    android:layout_marginTop="10dp"
+
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+
+                    android:src="@drawable/caplike_point_top_ic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <!-- Header DISPLAY "SI Your Recent Checks" -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:id="@+id/rtv2"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:textSize="14dp"
+                        android:id="@+id/rtv1"
+                        android:layout_marginRight="-10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textColor="#000000"
+                        android:text="Your recent checks"
+                        />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toStartOf="@id/rtv1"
+                        android:src="@drawable/search_black_icon"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!-- List is EMPTY -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13dp"
+                    android:textColor="#171717"
+                    android:id="@+id/TV_recent_listView_empty"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="5dp"
+
+                    app:layout_constraintTop_toBottomOf="@id/rtv2"
+                    android:text="You don't have any recent checks"
+                    />
+                <!-- List View -->
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:id="@+id/LV_list_score_recent_URLs"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rtv2"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- Layout View below the LISTVIEW -->
+         </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--2.  Compare SEO:      Layout 2 -->
+         <!--3.  Broken Links:   Layout 3 -->
+         <!--5.  Settings: -->
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
